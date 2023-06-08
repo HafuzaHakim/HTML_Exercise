@@ -4,38 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building Structure</title>
-</head>
+    <title>Layout Using Flexbox</title>
+    <style>
 
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header,footer{
+            background-color: lightgray;
+            text-align: center;
+            border:2px dashed black;
+        }
+
+        header{
+            padding:50px;
+        }
+
+        footer{
+            padding: 20px;
+        }
+
+        main{
+            display: flex;
+        }
+        
+        p{
+            height:40vh;
+            padding:5px;
+        }
+
+        .side{
+            flex:1 1 auto;
+            background-color: darkgrey;
+        }
+
+        .center{
+            flex:2 1 auto;
+            background-color: gainsboro;
+        }
+
+    </style>
+</head>
 <body>
 
-    <header class="top">
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Articles</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+    <header>
+        <h1>Header</h1>
     </header>
-
-    <aside>This is a random text inside a <b>aside</b> tag.</aside>
-
-    <article class="mid">
-        <h1>Title</h1>
-        <p>Body of article</p>
-    </article>
-
-    <section>Contact Us Here!</section>
-
-    <footer>Made by Fuza</footer>
-
-    <p><a href="about.html">Relative path to about.html</a></p>
-    <p><a href="https://sigmaschool.co/" target="_blank">Absolute Path to Sigma School Website</a></p>
-    <p><a href="mailto:hafuzahakim@gmail.com" class="end">Allow to send email to me.</a></p>
-    <p><a href="#top">Go to header.</a></p>
-    <p><a href="#mid">Go to mid.</a></p>
-    <p><a href="#end">Go to end.</a></p>
-
+    <main>
+        <section class="side">
+            <p>column</p>
+        </section>
+        <section class="center">
+            <p>column</p>
+        </section>
+        <section class="side">
+            <p>column</p>
+        </section>
+    </main>
+    <footer>
+        <h5>Footer</h5>
+    </footer>
 </body>
 </html>
